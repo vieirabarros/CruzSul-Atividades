@@ -1,0 +1,20 @@
+<script src="https://unpkg.com/vue@3"> </script>
+
+<div id="app">
+    <ul>
+      <li v-for="(nome, index) in nomes">
+        {{ index }} - {{ nome }}
+      </li>
+    </ul>
+  </div>
+  
+  <script>
+    const app = Vue.createApp({
+      data() {
+        return {
+          nomes: ['Marco', 'Mariana', 'Ana', 'Alexandre', 'Suzana']
+        }
+      }
+    })
+    app.mount('#app')
+  </script>

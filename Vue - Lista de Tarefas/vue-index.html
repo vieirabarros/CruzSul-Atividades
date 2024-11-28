@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="vue-style.css">
+</head>
+
+<body id="app">
+    <header>
+      <h1>Lista de Tarefas</h1>
+      <input type="text" id="tarefa" placeholder="Digite a sua tarefa..." v-model="item">
+      <span><i class="fas fa-plus-circle" id="btn" v-on:click="add"></i></span>
+    </header>
+    
+    <ul id="lista">
+      <li v-for="(item, index) in tarefas">
+        <i class="fas fa-check-circle check"></i>
+        <span v-on:click="check">{{item}}</span>
+        <i class="fas fa-trash-can exclude" v-on:click="del(index)" ></i>
+      </li>
+    </ul>
+    
+    <script src="https://unpkg.com/vue@3"> </script>
+    <script src="vue-script.js"></script>
+</body>
+</html>
+
